@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #87ceeb;
+  --secondary: #f7f7f7;
+  --accent: #2196f3;
+  --success: #4caf50;
+  --warning: #ffc107;
+  --danger: #f44336;
+}
+/* index.css */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+display: none;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+display: none;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+ display: none
+}
+
+body {
+  @apply font-sans bg-white;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#87CEEB] hover:bg-[#6EB7D4] text-white font-medium py-2 px-4 rounded transition-all;
+  }
+
+  .btn-accent {
+    @apply bg-[#2196F3] hover:bg-[#1976D2] text-white font-medium py-2 px-4 rounded transition-all;
+  }
+
+  .btn-success {
+    @apply bg-[#4CAF50] hover:bg-[#388E3C] text-white font-medium py-2 px-4 rounded transition-all;
+  }
+
+  .container-custom {
+    @apply container px-4 mx-auto sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .card {
+    @apply overflow-hidden transition-transform duration-300 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1;
+  }
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
