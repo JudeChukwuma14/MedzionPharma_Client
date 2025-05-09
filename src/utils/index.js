@@ -3,7 +3,8 @@ import axios from 'axios';
 
 
 
-const API_URL = "http://localhost:4000/api/v1/product"
+// const API_URL = "http://localhost:4000/api/v1/product"
+const API_URL = "https://medzionpharma-api.onrender.com/api/v1/product"
 export const api = axios.create({
     baseURL: API_URL,
 })
