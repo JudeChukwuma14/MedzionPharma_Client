@@ -12,7 +12,7 @@ import {
   Phone,
 } from "lucide-react";
 import { searchProducts } from "../utils";
-
+import Logo from "../assets/image/FullLogo.png"
 const Phonenumber = "08142874556";
 
 const Header = () => {
@@ -110,9 +110,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex flex-col">
-              <span className="text-2xl font-bold text-[#2196F3]">
-                Medzion<span className="text-[#87CEEB]">Pharma</span>
-              </span>
+          <img src={Logo} className="w-20 md:w-28" />
             </Link>
 
             <div className="flex items-center gap-6">

@@ -106,7 +106,7 @@ ${formatCartItems()}
 *Total Amount:* ₦${total.toFixed(2)}
 
 *Payment Method:* ${
-      data.paymentMethod === "card" ? "Credit/Debit Card" : "Pay on Delivery"
+      data.paymentMethod === "card" ? "Credit/Debit Card" : "Pay Before Delivery"
     }
 ----------------------------------
 Thank you for your order!
@@ -135,22 +135,22 @@ Thank you for your order!
 
   if (orderPlaced) {
     return (
-      <div className="container-custom py-12">
-        <div className="max-w-2xl mx-auto bg-white shadow-md p-8 text-center">
+      <div className="py-12 container-custom">
+        <div className="max-w-2xl p-8 mx-auto text-center bg-white shadow-md">
           <div className="flex justify-center mb-6">
-            <div className="bg-green-100 p-3 rounded-full">
+            <div className="p-3 bg-green-100 rounded-full">
               <CheckCircle size={48} className="text-green-600" />
             </div>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="mb-4 text-2xl font-bold text-gray-800 md:text-3xl">
             Order Placed Successfully!
           </h1>
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             Thank you for your order. We've received your order and will begin
             processing it right away. Your order details have been sent to our
             WhatsApp for confirmation.
           </p>
-          <div className="bg-gray-50 p-4 mb-6">
+          <div className="p-4 mb-6 bg-gray-50">
             <p className="font-medium text-gray-800">
               Order Reference:{" "}
               <span className="text-[#2196F3]">
@@ -158,7 +158,7 @@ Thank you for your order!
               </span>
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link to="/" className="btn-accent">
               Return to Home
             </Link>
@@ -172,8 +172,8 @@ Thank you for your order!
   }
 
   return (
-    <div className="container-custom py-8">
-      <div className="flex items-center text-sm text-gray-500 mb-6">
+    <div className="py-8 container-custom">
+      <div className="flex items-center mb-6 text-sm text-gray-500">
         <Link to="/" className="hover:text-[#2196F3]">
           Home
         </Link>
@@ -185,17 +185,17 @@ Thank you for your order!
         <span className="text-gray-700">Checkout</span>
       </div>
 
-      <h1 className="text-2xl md:text-3xl font-bold mb-8">Checkout</h1>
+      <h1 className="mb-8 text-2xl font-bold md:text-3xl">Checkout</h1>
 
       {cartItems.length === 0 ? (
-        <div className="bg-white shadow-md p-6 text-center">
+        <div className="p-6 text-center bg-white shadow-md">
           <div className="flex justify-center mb-4">
             <AlertCircle size={48} className="text-yellow-500" />
           </div>
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">
+          <h2 className="mb-2 text-xl font-semibold text-gray-800">
             Your cart is empty
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             You need to add items to your cart before checking out.
           </p>
           <Link to="/shop" className="btn-accent">
@@ -203,28 +203,28 @@ Thank you for your order!
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Checkout Form */}
           <div className="lg:col-span-2">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="bg-white shadow-md p-6"
+              className="p-6 bg-white shadow-md"
             >
-              <h2 className="text-xl font-semibold mb-6 pb-4 border-b">
+              <h2 className="pb-4 mb-6 text-xl font-semibold border-b">
                 Shipping Information
               </h2>
 
               {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-2">
                 <div>
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     First Name *
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <User size={16} className="text-gray-400" />
                     </div>
                     <input
@@ -247,12 +247,12 @@ Thank you for your order!
                 <div>
                   <label
                     htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     Last Name *
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <User size={16} className="text-gray-400" />
                     </div>
                     <input
@@ -274,16 +274,16 @@ Thank you for your order!
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-2">
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     Email Address *
                   </label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <Mail size={16} className="text-gray-400" />
                     </div>
                     <input
@@ -310,7 +310,7 @@ Thank you for your order!
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     Phone Number *
                   </label>
@@ -347,11 +347,11 @@ Thank you for your order!
               </div>
 
               {/* Location Information */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-3">
                 <div>
                   <label
                     htmlFor="country"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     Country *
                   </label>
@@ -385,7 +385,7 @@ Thank you for your order!
                 <div>
                   <label
                     htmlFor="state"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     State/Province *
                   </label>
@@ -420,7 +420,7 @@ Thank you for your order!
                 <div>
                   <label
                     htmlFor="city"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-700"
                   >
                     City *
                   </label>
@@ -457,12 +457,12 @@ Thank you for your order!
               <div className="mb-6">
                 <label
                   htmlFor="address"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block mb-1 text-sm font-medium text-gray-700"
                 >
                   Delivery Address *
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <MapPin size={16} className="text-gray-400" />
                   </div>
                   <input
@@ -487,7 +487,7 @@ Thank you for your order!
               <div className="mb-6">
                 <label
                   htmlFor="notes"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block mb-1 text-sm font-medium text-gray-700"
                 >
                   Order Notes (Optional)
                 </label>
@@ -500,11 +500,11 @@ Thank you for your order!
                 ></textarea>
               </div>
 
-              <h2 className="text-xl font-semibold mb-6 pb-4 border-b">
+              <h2 className="pb-4 mb-6 text-xl font-semibold border-b">
                 Payment Method
               </h2>
 
-              <div className="space-y-4 mb-6">
+              <div className="mb-6 space-y-4">
                 <div className="flex items-center">
                   <input
                     {...register("paymentMethod")}
@@ -513,7 +513,7 @@ Thank you for your order!
                     value="card"
                     className="w-4 h-4 text-[#2196F3] focus:ring-[#2196F3]"
                   />
-                  <label htmlFor="card" className="ml-2 flex items-center">
+                  <label htmlFor="card" className="flex items-center ml-2">
                     <CreditCard size={20} className="mr-2 text-gray-600" />
                     <span className="text-sm md:text-lg">
                       Credit/Debit Card (Pay via WhatsApp)
@@ -530,7 +530,7 @@ Thank you for your order!
                     className="w-4 h-4 text-[#2196F3] focus:ring-[#2196F3]"
                   />
                   <label htmlFor="payOnDelivery" className="ml-2">
-                    Pay on Delivery
+                   Pay Before Delivery
                   </label>
                 </div>
               </div>
@@ -544,7 +544,7 @@ Thank you for your order!
                 </Link>
                 <button
                   type="submit"
-                  className="btn-success flex items-center justify-center text-sm md:text-lg"
+                  className="flex items-center justify-center text-sm btn-success md:text-lg"
                   disabled={isProcessing}
                 >
                   {isProcessing ? "Processing..." : "Place Order via WhatsApp"}
@@ -555,25 +555,25 @@ Thank you for your order!
 
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <div className="bg-white shadow-md p-6 sticky top-24">
-              <h2 className="text-xl font-semibold mb-6 pb-4 border-b">
+            <div className="sticky p-6 bg-white shadow-md top-24">
+              <h2 className="pb-4 mb-6 text-xl font-semibold border-b">
                 Order Summary
               </h2>
 
-              <div className="max-h-60 overflow-y-auto mb-6">
+              <div className="mb-6 overflow-y-auto max-h-60">
                 {cartItems.map((item) => (
                   <div
                     key={item.id}
                     className="flex items-center py-3 border-b"
                   >
-                    <div className="w-16 h-16 flex-shrink-0">
+                    <div className="flex-shrink-0 w-16 h-16">
                       <img
                         src={item.image || item.images?.[0]}
                         alt={item.name}
-                        className="w-full h-full object-cover rounded-md"
+                        className="object-cover w-full h-full rounded-md"
                       />
                     </div>
-                    <div className="ml-4 flex-grow">
+                    <div className="flex-grow ml-4">
                       <h3 className="text-sm font-medium text-gray-800">
                         {item.name}
                       </h3>
@@ -595,7 +595,7 @@ Thank you for your order!
                 ))}
               </div>
 
-              <div className="space-y-3 mb-6">
+              <div className="mb-6 space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
                   <span className="font-medium">₦{subtotal.toFixed(2)}</span>
@@ -606,15 +606,15 @@ Thank you for your order!
                     {deliveryFee === 0 ? "Free" : `₦${deliveryFee.toFixed(2)}`}
                   </span>
                 </div>
-                <div className="border-t pt-3 flex justify-between font-bold text-gray-800">
+                <div className="flex justify-between pt-3 font-bold text-gray-800 border-t">
                   <span>Total</span>
                   <span className="text-[#2196F3]">₦{total.toFixed(2)}</span>
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-4 text-sm text-gray-600">
+              <div className="p-4 text-sm text-gray-600 bg-gray-50">
                 <p className="mb-2">By placing your order, you agree to our:</p>
-                <ul className="list-disc list-inside space-y-1">
+                <ul className="space-y-1 list-disc list-inside">
                   <li>
                     <Link
                       to="/terms"
