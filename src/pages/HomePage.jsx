@@ -51,42 +51,47 @@ const HomePage = () => {
     {
       name: "Vitamins",
       slug: "vitamins",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/5865/5865759.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Protein",
       slug: "protein",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/833/833102.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Omega Fatty Acids",
       slug: "omega-fatty-acids",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/16124/16124735.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Performance",
       slug: "performance",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/14654/14654022.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Minerals",
       slug: "minerals",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/13015/13015954.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Herbs",
       slug: "herbs",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/15521/15521695.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Supplements",
       slug: "supplements",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/6442/6442363.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
     {
       name: "Beauty & Personal Care",
       slug: "beauty-personal-care",
-      icon: "https://i.pinimg.com/736x/9c/67/62/9c6762530db70b24ae324459e6e74355.jpg",
+      icon: "https://cdn-icons-png.freepik.com/256/5802/5802200.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
+    },
+      {
+      name: "Sexual Wellbeing",
+      slug: "sexual-wellbeing",
+      icon: "https://cdn-icons-png.freepik.com/256/18328/18328449.png?ga=GA1.1.642372306.1746340677&semt=ais_hybrid",
     },
   ];
 
@@ -97,7 +102,7 @@ const HomePage = () => {
       location: "Lagos",
       rating: 5,
       comment:
-        "MedzionPharma's same-day delivery saved me when I urgently needed medicine for my daughter. Great service!",
+        "MedzionPharma's same-day delivery saved me when I urgently needed medicine for my daughter. Great service! I’ve also been impressed with the range of wellness products available.",
       avatar:
         "https://i.pinimg.com/736x/3b/0e/c6/3b0ec6ed87d312bc4d449f7ed05016ff.jpg",
     },
@@ -107,19 +112,19 @@ const HomePage = () => {
       location: "Abuja",
       rating: 4,
       comment:
-        "I love that I can upload my prescription and have my medications delivered right to my doorstep.",
+        "Ordering supplements from MedzionPharma is quick and stress-free. The whey protein has been a great addition to my fitness routine.",
       avatar:
-        "https://i.pinimg.com/736x/3b/0e/c6/3b0ec6ed87d312bc4d449f7ed05016ff.jpg",
+        "https://i.pinimg.com/736x/a9/25/82/a92582d3de6f1277450d7e9fd8fa27c6.jpg",
     },
     {
       id: 3,
-      name: "Emmanuel Osei",
+      name: "keemah",
       location: "Port Harcourt",
       rating: 5,
       comment:
-        "The prices are competitive and the website is so easy to use. I've made MedzionPharma my go-to pharmacy.",
+        "The prices are competitive and the website is so easy to use. I've made MedzionPharma my go-to pharmacy. Their beauty supplements have really helped my skin.",
       avatar:
-        "https://i.pinimg.com/736x/3b/0e/c6/3b0ec6ed87d312bc4d449f7ed05016ff.jpg",
+        "https://i.pinimg.com/736x/db/e3/98/dbe398c23bdc84b3c69eb819f51e663f.jpg",
     },
   ];
 
@@ -220,7 +225,7 @@ const HomePage = () => {
                   new Date(b.createdAt).getTime() -
                   new Date(a.createdAt).getTime()
               )
-              .slice(0, 5)
+              .slice(0, 10)
               .map((product) => (
                 <ProductCard
                   key={product._id}

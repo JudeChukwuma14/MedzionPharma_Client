@@ -36,7 +36,7 @@ const CheckoutPage = () => {
       lastName: "",
       email: "",
       phone: "",
-      country: "NG", // Nigeria as default
+      country: "NG",
       state: "",
       city: "",
       address: "",

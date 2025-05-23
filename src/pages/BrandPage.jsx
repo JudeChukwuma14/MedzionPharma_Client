@@ -4,7 +4,7 @@ import BrandCard from "../components/BrandCard";
 import { FaRegSadTear, FaShoppingCart } from "react-icons/fa";
 import Spinners from "../components/reuse/Spinners";
 import { productsAll } from "../utils";
-
+import Logo from "../assets/image/MPLogo.png";
 const BrandPage = () => {
   const [loading, setLoading] = useState(true);
   const [brands, setBrands] = useState([]);
@@ -26,7 +26,7 @@ const BrandPage = () => {
             acc[brandName] = {
               id: product.brandId || product._id, // Prefer brandId if available
               name: brandName,
-              icon: product.brandLogo || "/default-brand-logo.png",
+              icon: product.brandLogo || "https://medzionpharma.vercel.app/assets/FullLogo-gkBuyRrX.png",
               productCount: 0,
             };
           }
@@ -138,7 +138,7 @@ const BrandPage = () => {
           {brands.map((brand) => (
             <div
               key={brand.id}
-              className="p-4 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="p-4 transition-shadow bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md"
             >
               <BrandCard brandName={brand} />
             </div>
@@ -148,7 +148,7 @@ const BrandPage = () => {
 
       {/* Brand Categories Section */}
       <section
-        className="mt-12 p-6 bg-gray-50 rounded-lg"
+        className="p-6 mt-12 rounded-lg bg-gray-50"
         aria-labelledby="brand-categories-heading"
       >
         <h2
@@ -161,7 +161,7 @@ const BrandPage = () => {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <Link
             to="/shop?category=pharmaceuticals"
-            className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="p-4 transition-shadow bg-white rounded-lg shadow-sm hover:shadow-md"
             aria-label="Browse Pharmaceuticals"
           >
             <h3 className="mb-2 text-lg font-medium text-gray-800">
@@ -173,7 +173,7 @@ const BrandPage = () => {
           </Link>
           <Link
             to="/shop?category=supplements"
-            className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="p-4 transition-shadow bg-white rounded-lg shadow-sm hover:shadow-md"
             aria-label="Browse Supplements"
           >
             <h3 className="mb-2 text-lg font-medium text-gray-800">
@@ -185,7 +185,7 @@ const BrandPage = () => {
           </Link>
           <Link
             to="/shop?category=medical-devices"
-            className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="p-4 transition-shadow bg-white rounded-lg shadow-sm hover:shadow-md"
             aria-label="Browse Medical Devices"
           >
             <h3 className="mb-2 text-lg font-medium text-gray-800">
@@ -197,7 +197,7 @@ const BrandPage = () => {
           </Link>
           <Link
             to="/shop?category=personal-care"
-            className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="p-4 transition-shadow bg-white rounded-lg shadow-sm hover:shadow-md"
             aria-label="Browse Personal Care"
           >
             <h3 className="mb-2 text-lg font-medium text-gray-800">
